@@ -1,0 +1,6 @@
+# Export Cargo path for Rust apps
+#export PATH="$HOME/.cargo/bin"
+
+#export PATH="/home/alien/.cargo/bin"
+
+eval "$(atuin init zsh)"

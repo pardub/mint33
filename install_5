@@ -97,7 +97,7 @@ sudo apt update -y
 sudo apt install eza -y || exit
 
 # youtube -cli
-sudo add-apt-repository ppa:tomtomtom/yt-dlp -y
+sudo add-apt-repository -y ppa:tomtomtom/yt-dlp
 sudo apt install yt-dlp -y
 
 # rsync for cloud storage

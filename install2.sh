@@ -27,4 +27,4 @@ sudo apt install unattended-upgrades -y
 
 sudo apt install python3-venv python3-pip -y
 python3 -m venv global_env
-source global_env/bin/activate
+#source global_env/bin/activate

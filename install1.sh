@@ -41,3 +41,5 @@ wget https://raw.githubusercontent.com/pardub/dotfiles/main/dotfiles/zsh-functio
 # Download init.vim
 cd "$HOME"/.config/nvim || exit
 wget https://raw.githubusercontent.com/pardub/dotfiles/main/dotfiles/init.vim
+
+sudo reboot

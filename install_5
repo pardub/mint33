@@ -3,7 +3,6 @@
 # A simple, fast and user-friendly alternative to 'find' 
 cargo install fd-find
 
-
 # add repo to install Foliate ( ebook reader)
 sudo add-apt-repository -y ppa:apandada1/foliate -y
 sudo apt update -y
@@ -11,8 +10,6 @@ sudo apt install foliate -y
 
 # Man page with colors
 sudo apt install most -y
-
-###
 
 sudo apt install jq -y
 
@@ -121,10 +118,10 @@ sudo apt install qtpass -y
 # Install pip3
 sudo apt install python3-pip -y
 
-
 # Calibre for Mint
 sudo apt install libxcb-cursor0  -y
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+
 
 # +--------------------------+
 # | Tools installed with Git |
@@ -149,6 +146,7 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https -y
 sudo apt update -y 
 sudo apt install code -y
+
 
 # +---------------------------------------+
 # | Manual install - Intellj Idea Toolbox |

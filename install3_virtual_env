@@ -1,0 +1,9 @@
+# To be added in .zshrc
+
+if [ -d "$HOME/global_env" ]; then
+	echo "Activating global_env..."
+	. "$HOME/global_env/bin/activate"
+	echo "global_env activated!"
+else
+	echo "global_env not found"
+fi

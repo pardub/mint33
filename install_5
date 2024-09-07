@@ -11,6 +11,9 @@ sudo apt install foliate -y
 # Man page with colors
 sudo apt install most -y
 
+# Transmission torrents
+sudo apt install transmission -y
+
 sudo apt install jq -y
 
 # command-line HTTP client, similar to Curl

@@ -6,8 +6,6 @@
 # | flatpak |
 # +---------+
 
-flatpak install flathub com.transmissionbt.Transmission -y 
-
 flatpak install flathub org.tenacityaudio.Tenacity -y
 
 flatpak install flathub org.filezillaproject.Filezilla -y 
@@ -18,51 +16,25 @@ flatpak install flathub com.github.tchx84.Flatseal -y
 
 flatpak install flathub org.mozilla.firefox -y
 
-
 flatpak install flathub fr.romainvigier.MetadataCleaner -y
-
 
 flatpak install flathub org.standardnotes.standardnotes -y
 
-
-#flatpak install flathub com.mattjakeman.ExtensionManager -y
-
-
-# flatpak install flathub org.telegram.desktop -y
-
-
-# flatpak install flathub com.viber.Viber -y
-
+flatpak install flathub org.telegram.desktop -y
 
 flatpak install flathub org.kde.okular -y
 
-
 flatpak install flathub com.github.jeromerobert.pdfarranger -y
-
-
-flatpak install flathub com.github.babluboy.bookworm -y
-
 
 flatpak install flathub net.ankiweb.Anki -y
 
-
 flatpak install flathub io.mpv.Mpv -y
-
 
 flatpak install flathub com.github.micahflee.torbrowser-launcher -y
 
-
 flatpak install flathub org.gtkhash.gtkhash -y
 
-# Gnome certificate manager and GUI for OpenPGP 
-#flatpak install flathub org.gnome.seahorse.Application -y
-
-
 flatpak install flathub org.keepassxc.KeePassXC -y
-
-
-flatpak install flathub com.bitwarden.desktop -y
-
 
 flatpak install flathub com.borgbase.Vorta -y
 
@@ -78,9 +50,6 @@ cd
 
 # Intellij Idea Community
 #flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
-
-# IRC Client
-flatpak install flathub io.github.Hexchat -y
 
 # An Open Source YouTube app for privacy
 flatpak install flathub io.freetubeapp.FreeTube -y

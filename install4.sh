@@ -8,8 +8,6 @@
 
 flatpak install flathub com.transmissionbt.Transmission -y 
 
-flatpak install flathub io.github.TransmissionRemoteGtk -y 
-
 flatpak install flathub org.tenacityaudio.Tenacity -y
 
 flatpak install flathub org.filezillaproject.Filezilla -y 

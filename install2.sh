@@ -1,4 +1,4 @@
-#!/bin/bash -xev
+#!/bin/zsh -xev
 
 mkdir -p ~/.ssh/config
 

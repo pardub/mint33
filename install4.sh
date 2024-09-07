@@ -43,17 +43,8 @@ cd ~/.ssh
 chmod 600 config || exit
 cd
 
-# Virtualization made simple
-# flatpak install flathub org.gnome.Boxes -y
-
-# Intellij Idea Community
-#flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
-
 # An Open Source YouTube app for privacy
 flatpak install flathub io.freetubeapp.FreeTube -y
-
-# Libre Office
-#flatpak install flathub org.libreoffice.LibreOffice -y
 
 # Open Office
 flatpak install flathub org.onlyoffice.desktopeditors -y

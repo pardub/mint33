@@ -197,7 +197,7 @@ sudo usermod -aG kvm $USER
 sudo usermod -aG libvirt $USER
 
 # Install OpenJdk 11
-sudo apt install openjdk-11-jdk  -y
+#####sudo apt install openjdk-11-jdk  -y
 
 gpg --list-keys
 
@@ -231,33 +231,7 @@ cd || exit
 # |  Ripgrep   |
 # +------------+
 
-cd /tmp
-# Ensure necessary tools are installed
-if ! command -v cargo &> /dev/null; then
-    echo "Cargo is required. Please install Rust and Cargo and try again."
-    exit 1
-fi
-
-
-
-# Install PCRE2 development library
-sudo apt update
-sudo apt install -y libpcre2-dev
-
-# Clone the ripgrep repository
-git clone https://github.com/BurntSushi/ripgrep.git
-cd ripgrep
-
-# Build ripgrep with PCRE2 support
-cargo build --release --features 'pcre2'
-
-# Install the built binary
-sudo cp target/release/rg /usr/local/bin/
-
-# Verify installation
-rg --version
-
-echo "ripgrep with PCRE2 support installed successfully."
+sudo apt install ripgrep -y
 
  +------------------------+
 # |  Battery optimization  |

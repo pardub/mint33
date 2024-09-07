@@ -1,0 +1,33 @@
+#!/bin/bash
+
+###*** FIREWALL FOR A DESKTOP OPERATING SYSTEM USING NFTABLES ***###
+
+# flush filter table and reset rules
+nft flush table inet filter
+
+# create a new filter table
+nft add table inet filter
+
+# create input and output chains
+nft add chain inet filter input { type filter hook input priority 0 \; policy drop \; }
+nft add chain inet filter output { type filter hook output priority 0 \; policy drop \; }
+
+# allow loopback interface traffic
+nft add rule inet filter input iif lo accept
+nft add rule inet filter output oif lo accept
+
+# drop invalid packets on INPUT and OUTPUT
+nft add rule inet filter input ct state invalid drop
+nft add rule inet filter output ct state invalid drop
+
+# optional: uncomment to allow incoming connections from LAN
+# nft add rule inet filter input ip saddr 192.168.0.0/24 accept
+
+# optional: uncomment to allow incoming ssh connections from a specific IP
+# nft add rule inet filter input ip saddr 80.0.0.1 tcp dport 22 ct state new accept
+
+# allow only ESTABLISHED and RELATED packets on INPUT
+nft add rule inet filter input ct state established,related accept
+
+# allow NEW, ESTABLISHED, and RELATED packets on OUTPUT
+nft add rule inet filter output ct state new,established,related accept

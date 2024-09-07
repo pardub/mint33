@@ -38,8 +38,6 @@ flatpak install flathub org.keepassxc.KeePassXC -y
 
 flatpak install flathub com.borgbase.Vorta -y
 
-###
-
 
 cd ~/.ssh 
 chmod 600 config || exit

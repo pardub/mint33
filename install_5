@@ -101,7 +101,7 @@ sudo add-apt-repository -y ppa:tomtomtom/yt-dlp
 sudo apt install yt-dlp -y
 
 # rsync for cloud storage
-sudo apt install rclone -y
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
 
 # Collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata.
 ####sudo apt install ffmpeg -y

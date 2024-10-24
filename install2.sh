@@ -33,6 +33,14 @@ cd || exit
 # | Python virtual Env |
 # +--------------------+
 
-sudo apt install python3-venv python3-pip -y
-python3 -m venv global_env
-#source global_env/bin/activate
+# +------------------------------+
+# | Set up virtual environments  |
+# +------------------------------+
+
+mkdir -p $HOME/virtual_env/shared_libs/
+python3 -m venv $HOME/virtual_env/shared_libs/
+source $HOME/virtual_env/shared_libs/bin/activate
+
+mkdir -p $HOME/virtual_env/global_env/
+python3 -m venv $HOME/virtual_env/global_env
+source $HOME/virtual_env/global_env/bin/activate

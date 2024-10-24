@@ -130,12 +130,48 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
 # | Tools installed with Git |
 # +--------------------------+
 
+# +-----+
+# | zfz |
+# +-----+
 # A command-line fuzzy finder
-### SEE DEFUALT ANSWERS FOR SCRIPT INSTALL
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+### SEE DEFAULT ANSWERS FOR SCRIPT INSTALL
+#git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # ~/.fzf/install
-yes | ~/.fzf/install
+#yes | ~/.fzf/install
 
+cd /tmp
+
+# Check if jq is installed, exit if not
+if ! command -v jq &> /dev/null; then
+    echo "jq could not be found, please install it first."
+    exit 1
+fi
+
+# Download the latest fzf binary for 64-bit Linux using GitHub's API
+curl -s https://api.github.com/repos/junegunn/fzf/releases/latest | \
+jq -r '.assets[] | select(.name | contains("linux_amd64")) | .browser_download_url' | \
+xargs wget -O fzf.tar.gz || { echo 'Download failed'; exit 1; }
+
+# Check if the tarball was downloaded and then extract it
+if [ -f fzf.tar.gz ]; then
+    tar -xzf fzf.tar.gz
+    echo "Extraction successful."
+else
+    echo "Failed to download fzf tarball."
+    exit 1
+fi
+
+# Check if the fzf binary was extracted and make it executable
+if [ -f fzf ]; then
+    chmod +x fzf
+    echo "Binary made executable."
+else
+    echo "Extraction did not create an fzf binary."
+    exit 1
+fi
+
+# Move the binary to /usr/local/bin to make it available system-wide
+sudo mv fzf /usr/local/bin/ && echo "fzf successfully installed to /usr/local/bin."
 
 # +--------+
 # | Vscode |

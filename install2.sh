@@ -22,10 +22,10 @@ sudo echo 'nameserver 84.200.70.40' | sudo tee -a /etc/resolv.conf
 sudo apt install unattended-upgrades -y
 
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
-mkdir -p "$HOME"/.local/share/fonts/jetbrains
+mkdir -p /usr/share/fonts/jetbrains
 cd /tmp
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
-sudo unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts/jetbrains
+sudo unzip /tmp/JetBrainsMono.zip -d /usr/share/fonts/jetbrains
 fc-cache -v
 cd || exit
 

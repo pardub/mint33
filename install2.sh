@@ -29,10 +29,6 @@ sudo unzip /tmp/JetBrainsMono.zip -d /usr/share/fonts/jetbrains
 fc-cache -v
 cd || exit
 
-# +--------------------+
-# | Python virtual Env |
-# +--------------------+
-
 # +------------------------------+
 # | Set up virtual environments  |
 # +------------------------------+

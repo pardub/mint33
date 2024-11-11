@@ -74,3 +74,6 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 exec bash
 source global_env/bin/activate
 
+# A very fast implementation of tldr in Rust.
+cargo install tealdeer
+

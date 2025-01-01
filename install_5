@@ -57,6 +57,9 @@ sudo apt install colordiff -y
 # Blueman is a GTK+ Bluetooth Manager 
 sudo apt install blueman -y
 
+# Rofi: A window switcher, application launcher and dmenu replacement 
+sudo apt install rofi -y
+
 ####
 
 # Development tools

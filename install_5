@@ -60,6 +60,11 @@ sudo apt install blueman -y
 # Rofi: A window switcher, application launcher and dmenu replacement 
 sudo apt install rofi -y
 
+% Alacritty  repo
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt update -y
+sudo apt install alacritty -y
+
 ####
 
 # Development tools

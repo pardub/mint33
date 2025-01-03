@@ -3,6 +3,9 @@
 # A simple, fast and user-friendly alternative to 'find' 
 cargo install fd-find
 
+# A more intuitive version of du in rust
+cargo install du-dust
+
 # add repo to install Foliate ( ebook reader)
 sudo add-apt-repository -y ppa:apandada1/foliate -y
 sudo apt update -y

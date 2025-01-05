@@ -296,6 +296,10 @@ sudo auto-cpufreq --install
 # +--------------+
 # | Emacs Lucid  |
 # +--------------+
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.config/zsh/.zshrc  
+source ~/.config/zsh/.zshrc 
+
 sudo apt update -y
 
 # Install essential build tools and all required libraries
@@ -316,3 +320,35 @@ sudo update-alternatives --set g++ /usr/bin/g++-10 -y
 # Verify the setup (optional, log for debugging purposes)
 gcc --version
 g++ --version
+
+mkdir -p ~/src/emacs
+cd ~/src/emacs
+wget https://ftp.gnu.org/gnu/emacs/emacs-29.4.tar.xz
+tar -xvJf emacs-29.4.tar.xz
+cd emacs-29.4
+./configure --with-x-toolkit=lucid \
+            --with-x \
+            --with-cairo \
+            --with-native-compilation=aot \
+            --with-tree-sitter \
+            --with-json \
+            --with-png \
+            --with-jpeg \
+            --with-gif \
+            --with-rsvg \
+            --with-tiff \
+            --enable-acl \
+            --with-modules \
+            --with-harfbuzz \
+            --with-threads \
+            --with-zlib \
+            --with-mailutils \
+            --with-xpm \
+            --with-gnutls \
+            --with-xft \
+            --with-xml2
+make -j$(nproc)
+make install
+
+
+

@@ -283,7 +283,7 @@ cd || exit
 
 sudo apt install ripgrep -y
 
- +------------------------+
+# +------------------------+
 # |  Battery optimization  |
 # +------------------------+
 
@@ -291,3 +291,28 @@ sudo git clone https://github.com/AdnanHodzic/auto-cpufreq.git /opt/auto-cpufreq
 cd /opt/auto-cpufreq
 sudo ./auto-cpufreq-installer
 sudo auto-cpufreq --install
+
+
+# +--------------+
+# | Emacs Lucid  |
+# +--------------+
+sudo apt update -y
+
+# Install essential build tools and all required libraries
+sudo apt install -y \
+    build-essential gcc-10 g++-10 \
+    libgccjit-10-dev libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev \
+    libtiff-dev librsvg2-dev libcairo2-dev libtree-sitter-dev libjson-c-dev \
+    libmailutils-dev libacl1-dev libharfbuzz-dev libz-dev libxft-dev \
+    libgnutls28-dev libxml2-dev libgtk-3-dev libncurses-dev libjansson-dev \
+    texinfo wget tar gnupg
+
+# Set up gcc-10 as the default compiler
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 -y
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 100 -y 
+sudo update-alternatives --set gcc /usr/bin/gcc-10 -y
+sudo update-alternatives --set g++ /usr/bin/g++-10 -y
+
+# Verify the setup (optional, log for debugging purposes)
+gcc --version
+g++ --version
